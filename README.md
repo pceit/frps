@@ -73,6 +73,14 @@ sudo systemctl stop frps
 # 停止服务
 ```
 
+
+### linux 防火墙
+firewall-cmd --add-port=7500/tcp --permanent
+firewall-cmd --add-port=7001/tcp --permanent
+firewall-cmd --reload
+systemctl restart firewalld
+```
+
 ### docker 部署
 为避免因 **frps.ini** 文件的挂载,格式或者配置的错误导致容器无法正常运行并循环重启.请确保先配置好 **frps.ini** 后在执行启动.
 
