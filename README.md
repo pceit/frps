@@ -75,6 +75,7 @@ sudo systemctl stop frps
 
 
 ### linux 防火墙
+```
 firewall-cmd --add-port=7500/tcp --permanent
 firewall-cmd --add-port=7001/tcp --permanent
 firewall-cmd --reload
